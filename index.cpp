@@ -12,6 +12,13 @@ class Pet {
 
     public:
 
+    Pet (string name, string type, int age) {
+        this->name = name;
+        this->type = type;
+        this->age = age;
+        this->isAdopted = false;
+    }
+
         string getName() {
             return name;
         }
@@ -29,14 +36,14 @@ class Pet {
         }
 
         void adoptPet() {
-            isAdopted = true;
+            this->isAdopted = true;
         }
 
         void displayPetDetails() {
-            cout<<"Name"<<name<<endl;
-            cout<<"Type"<<type<<endl;
-            cout<<"Age"<<age<<endl;
-            cout<<"IsAdopted"<<isAdopted<<endl;
+            cout<<"Name"<<this->name<<endl;
+            cout<<"Type"<<this->type<<endl;
+            cout<<"Age"<<this->age<<endl;
+            cout<<"IsAdopted"<<this->isAdopted<<endl;
         }
 
 };
